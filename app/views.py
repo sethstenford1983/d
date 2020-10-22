@@ -7,6 +7,9 @@ from  app.models import Client
 from django.http import HttpResponseRedirect
 from django.contrib.auth import logout
 from django.http import HttpResponse,HttpResponseRedirect
+import requests
+import json
+import random
 
 def login_user(request):
     user = authenticate(
@@ -20,7 +23,7 @@ def login_user(request):
         return HttpResponseRedirect('main_page2')
 
 def index(request):
-    return render(request,'index.html',{'k':request.user.is_authenticated})
+    return render(request,'index.html',{'k':request.user.is_authenticated, 'title': _('Главная')})
 
 def register(request):
     user = User.objects.create_user(
@@ -50,6 +53,24 @@ def index1(request):
 def index2(request):
     return render(request,'index2.html')
 
+response = requests.get(
+    'http://www.nbrb.by/API/ExRates/Currencies'
+)
+data = json.loads(response.text)
+print(data)
 
+from django.utils.translation import ugettext as _
+def main(request):
+    return render(
+        'index.html',
+        {'title': _('Главная')}
+    )
+from django.utils.translation import ugettext as _, activate
 
+def main(request):
+    activate('en')
+    return render(
+        'index.html',
+        {'title': _('Главная')}
+    )
 
