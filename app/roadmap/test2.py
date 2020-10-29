@@ -10,7 +10,5 @@ r()
 def rt():
     ls = [ (3, [9, 1]), [(23,43), [5, 4]] ]
     v = 0
-    for a,(g,j)in ls:
-        v = v + g
-        print(v)
+
 rt()
