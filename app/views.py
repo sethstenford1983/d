@@ -53,11 +53,11 @@ def index1(request):
 def index2(request):
     return render(request,'index2.html')
 
-response = requests.get(
+#response = requests.get(
     'http://www.nbrb.by/API/ExRates/Currencies'
-)
-data = json.loads(response.text)
-print(data)
+#)
+#data = json.loads(response.text)
+#print(data)
 
 from django.utils.translation import ugettext as _
 def main(request):
