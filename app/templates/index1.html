@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <script src="/static/js/bootstrap.min.js"></script>
-    <title>title</title>
+    <title>title</title><style>
+        body {
+    background-image: url("/static/images/4.jpg");
+}
+    </style>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
 <script src="/static/js/jquery-3.3.1.min.js"></script>
 <script src="/static/js/popper.min.js"></script>
@@ -16,6 +20,7 @@
 {{ title }}
 <div class="container-fluid">
 <form method="post" action="pa">
+
   <div class="form-group">
       <label for="exampleInputlogin">login</label>
       <input name="login" type="login" class="form-control" id="exampleInputlogin" placeholder="login">
