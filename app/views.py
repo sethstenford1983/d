@@ -53,6 +53,9 @@ def index1(request):
 def index2(request):
     return render(request,'index2.html')
 
+def index3(request):
+    return render(request, 'index3.html')
+
 #response = requests.get(
     'http://www.nbrb.by/API/ExRates/Currencies'
 #)
