@@ -20,7 +20,7 @@ def login_user(request):
         return render(request,'index.html',{'k':request.user.is_authenticated})
     else:
         login(request, user)
-        return HttpResponseRedirect('main_page2')
+        return HttpResponseRedirect('main_page4')
 
 def index(request):
     return render(request,'index.html',{'k':request.user.is_authenticated, 'title': _('Главная')})
@@ -35,9 +35,9 @@ def register(request):
 def do_logout(request):
     if request.user.is_authenticated:
         logout(request)
-        return HttpResponseRedirect('main_page')
+        return HttpResponseRedirect('main_page3')
     else:
-        return HttpResponseRedirect('main_page')
+        return HttpResponseRedirect('main_page3')
 
 from django.http import JsonResponse
 
@@ -55,6 +55,15 @@ def index2(request):
 
 def index3(request):
     return render(request, 'index3.html')
+
+def index4(request):
+    return render(request, 'index4.html')
+
+def index5(request):
+    return render(request, 'index5.html')
+
+def index6(request):
+    return render(request, 'index6.html')
 
 #response = requests.get(
     'http://www.nbrb.by/API/ExRates/Currencies'
