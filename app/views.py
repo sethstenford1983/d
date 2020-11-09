@@ -65,8 +65,6 @@ def index5(request):
 def index6(request):
     return render(request, 'index6.html')
 
-def index7(request):
-    return render(request, 'index7.html')
 
 
 
