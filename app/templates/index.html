@@ -5,38 +5,13 @@
 
 </div>
 
-<div class = "container-fluid">
-    <div class="row">
-        <div class="col-2" style="padding: 0px">
-            <div class="card card-body bg-lighy" align="center">
-                <button type="button" class="btn btn-info">Главная</button>
-            </div>
-        </div>
-        <div class="col-2" style="padding: 0px">
-            <div class="card card-body bg-lighy" align="center">
-                <button type="button" class="btn btn-success">Статьи</button>
-            </div>
-        </div>
-        <div class="col-2" style="padding: 0px">
-            <div class="card card-body bg-lighy" align="center">
-                <button type="button" class="btn btn-success">Галерея</button>
-            </div>
-        </div>
-    <div class="col-1" style="padding: 0px">
-            <div class="card card-body bg-lighy" align="center">
-                <form method="post" action="ka">
-                <button type="submit" class="class1 btn btn-success">Выйти</button>
-                </form>
-            </div>
-        </div>
         <div class="card card-body bg-lighy" align="center">
             <form method="post" action="main_page1">
                 <a href="http://127.0.0.1:8000/main_page1"><button type="button" class="btn btn-success">Зарегистрироваться</button> </a>
             </form>
         </div>
         <div class="col-1" style="padding: 0px">
-            <div class="card card-body bg-lighy">
-                <h3>{% if k %}Юзер залогинен{%else%}Войдите на сайт{%endif%}</h3>
+                <h3>{% if k %}{%else%}Войдите на сайт{%endif%}</h3>
             </div>
         </div>
         <div class="col-2" style="padding: 0px">
